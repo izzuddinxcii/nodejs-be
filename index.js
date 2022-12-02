@@ -5,6 +5,8 @@ const port = 80
 
 app.get('/', (req, res) => res.send('ohsem lah'))
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log('listening port' + port)
 })
+
+module.exports = app
