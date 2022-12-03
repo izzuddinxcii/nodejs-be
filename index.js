@@ -10,7 +10,7 @@ const port = 80
 
 //console log server port
 app.listen(process.env.PORT || port, () => {
-    console.log('Server up on port');
+    console.log(`Server up on port ${port}`);
 })
 
 //middleware
