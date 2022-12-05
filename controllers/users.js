@@ -47,9 +47,10 @@ const searchUser = (req, res) => {
 }
 
 
-const createUsers = (req, res) => {
+const createUser = (req, res) => {
     const users = new Users({
         username: req.body.username,
+        password: req.body.password,
         email: req.body.email,
         phoneNumber: req.body.phoneNumber,
         skillSets: req.body.skillSets,
@@ -64,7 +65,7 @@ const createUsers = (req, res) => {
     });
 };
 
-const updateUsers = (req, res) => {
+const updateUser = (req, res) => {
     let params = {};
 
     for(let prop in req.body) if(req.body[prop]) params[prop] = req.body[prop];
@@ -78,7 +79,7 @@ const updateUsers = (req, res) => {
         });
   };
 
-const deleteUsers = (req, res) => {
+const deleteUser = (req, res) => {
     Users.deleteOne(
       { username: req.params.username },
     ).then(() => res.json({ message: "User Deleted" }))
@@ -89,7 +90,7 @@ module.exports = {
     getUser,
     searchUser,
     getUsers,
-    createUsers,
-    updateUsers,
-    deleteUsers
+    createUser,
+    updateUser,
+    deleteUser
 };

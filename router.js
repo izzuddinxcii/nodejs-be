@@ -1,8 +1,8 @@
-const { getUsers, getUser, createUsers, updateUsers, deleteUsers, searchUser } = require("./controllers/users");
+const { getUsers, getUser, createUser, updateUser, deleteUser, searchUser } = require("./controllers/users");
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
-  res.send("NodeJS API Server");
+  res.send("API");
 });
 
 module.exports = router;
@@ -10,6 +10,6 @@ module.exports = router;
 router.get("/users", getUsers);
 router.get("/user/:username", getUser);
 router.get("/users/:query", searchUser);
-router.post("/users", createUsers);
-router.put("/users/:username", updateUsers);
-router.delete("/users/:username", deleteUsers);
+router.post("/user", createUser);
+router.put("/user/:username", updateUser);
+router.delete("/user/:username", deleteUser);
