@@ -1,17 +1,20 @@
 
 # CRUD Using Node.JS
-Creating simple CRUD to create and manage user. Deployed on AWS Elastic Beanstalk and using MongoDB.
+Creating simple API to create and manage user. Deployed on AWS Elastic Beanstalk and using MongoDB.
 
 Deployed using AWS CodePipeline to Release on Production.
+
+Success will get 200 and any error is on 400.
+
 ## API Reference
 
-#### Base URL
+### Base URL
 
 `
   http://etiqa.ap-southeast-1.elasticbeanstalk.com
 `
 
-#### Get all Users
+### Get all Users
 
 `
   GET /users
@@ -21,7 +24,7 @@ Deployed using AWS CodePipeline to Release on Production.
 | :-------- | :------- | :------------------------- |
 | `api_key` | `string` | **Required**. Your API key |
 
-#### Get a User
+### Get a User
 
 `
   GET /user/${username}
@@ -31,7 +34,7 @@ Deployed using AWS CodePipeline to Release on Production.
 | :-------- | :------- | :-------------------------------- |
 | `username`| `string` | **Required**. Username of user    |
 
-#### Search User
+### Search User
 
 `
   GET /users/${query}
@@ -41,7 +44,7 @@ Deployed using AWS CodePipeline to Release on Production.
 | :-------- | :------- | :-------------------------------- |
 | `query`   | `string` | **Required**. Any keyword to query|
 
-#### Check Username is Exist
+### Check Username is Exist
 
 `
   GET /username/${username}
@@ -51,7 +54,7 @@ Deployed using AWS CodePipeline to Release on Production.
 | :-------- | :------- | :-------------------------------- |
 | `username`| `string` | **Required**. Username to check   |
 
-#### Create a New User
+### Create a New User
 
 `
   POST /user/
@@ -66,7 +69,7 @@ Deployed using AWS CodePipeline to Release on Production.
 | `skillSets`| `array`  | **Required**. List of Skill Sets      |
 | `hobby`    | `array`  | **Required**. List of Hobby           |
 
-#### Update a New User
+### Update a New User
 
 `
   PUT /user/${username}
