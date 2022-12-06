@@ -5,7 +5,7 @@ Creating simple CRUD to create and manage user. Deployed on AWS Elastic Beanstal
 Deployed using AWS CodePipeline to Release on Production.
 ## API Reference
 
-#### API Endpoint
+#### Base URL
 
 ```http
   http://etiqa.ap-southeast-1.elasticbeanstalk.com
@@ -103,3 +103,4 @@ To run this project, you will need to add the following environment variables to
 
 - Using JWT Based Authentication
 
+- Create a Swagger
