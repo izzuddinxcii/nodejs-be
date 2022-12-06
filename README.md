@@ -7,9 +7,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Base URL
 
-http```
+`
   http://etiqa.ap-southeast-1.elasticbeanstalk.com
-```
+`
 
 #### Get all Users
 
