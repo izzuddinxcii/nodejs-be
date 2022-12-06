@@ -7,15 +7,15 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Base URL
 
-```http
+`
   http://etiqa.ap-southeast-1.elasticbeanstalk.com
-```
+`
 
 #### Get all Users
 
-```http
+`
   GET /users
-```
+`
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -23,9 +23,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Get a User
 
-```http
+`
   GET /user/${username}
-```
+`
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -33,9 +33,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Search User
 
-```http
+`
   GET /users/${query}
-```
+`
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -43,9 +43,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Check Username is Exist
 
-```http
+`
   GET /username/${username}
-```
+`
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -53,9 +53,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Create a New User
 
-```http
+`
   POST /user/
-```
+`
 
 | Parameter  | Type     | Description                           |
 | :--------- | :------- | :------------------------------------ |
@@ -68,9 +68,9 @@ Deployed using AWS CodePipeline to Release on Production.
 
 #### Update a New User
 
-```http
+`
   PUT /user/${username}
-```
+`
 
 | Parameter  | Type     | Description                           |
 | :--------- | :------- | :------------------------------------ |
@@ -81,9 +81,9 @@ Deployed using AWS CodePipeline to Release on Production.
 | `skillSets`| `array`  | **Required**. List of Skill Sets      |
 | `hobby`    | `array`  | **Required**. List of Hobby           |
 
-```http
+`
   DELETE /user/${username}
-```
+`
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
