@@ -46,6 +46,19 @@ const searchUser = (req, res) => {
     });
 }
 
+const checkUsername = (req, res) => {
+    Users.exists({ username: req.params.query },
+        (err, user) => {
+        if (err) {
+        res.send(err);
+        }
+        if (user != null) {
+            res.json({ exists: true });
+        }
+        res.json({ exists: false });
+    });
+}
+
 
 const createUser = (req, res) => {
     const users = new Users({
@@ -89,6 +102,7 @@ const deleteUser = (req, res) => {
 module.exports = {
     getUser,
     searchUser,
+    checkUsername,
     getUsers,
     createUser,
     updateUser,
