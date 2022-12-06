@@ -3,7 +3,8 @@ const Users = require("../model/users");
 const getUsers  = (req, res) => {
     Users.find((err, todos) => {
         if (err) {
-        res.send(err);
+            res.statusCode = 400;
+            res.send(err);
         }
         res.json(todos);
     });
@@ -13,7 +14,8 @@ const getUsers  = (req, res) => {
     Users.findOne({ username: req.params.username },
         (err, user) => {
         if (err) {
-        res.send(err);
+            res.statusCode = 400;
+            res.send(err);
         }
         res.json(user);
     });
@@ -40,7 +42,8 @@ const searchUser = (req, res) => {
         ],
       },(err, user) => {
         if (err) {
-        res.send(err);
+            res.statusCode = 400;
+            res.send(err);
         }
         res.json(user);
     });
@@ -72,7 +75,8 @@ const createUser = (req, res) => {
 
     users.save((err, users) => {
         if (err) {
-        res.send(err);
+            res.statusCode = 400;
+            res.send(err);
         }
         res.json(users);
     });
@@ -87,6 +91,7 @@ const updateUser = (req, res) => {
         { new: true },
         (err, users) => {
           if (err) {
+            res.statusCode = 400;
             res.send(err);
           } else res.json(users);
         });
